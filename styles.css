@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #8e8e8e;
+  background-color: #b6b3b3;
 }
 
 html {
@@ -11,6 +11,19 @@ html {
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+
+h1 {
+  font-family: Arial Black;
+  font-weight: bold;
+  font-size: 40px;
+  background: #202020;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4),
+    0px -1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .grid {
@@ -21,19 +34,19 @@ html {
   grid-template-rows: 80px repeat(6, 80px);
   justify-content: center;
   border-radius: 25px;
-  padding: 60px;
-}
-
-.not-checked {
-  border: 0.5px solid;
-  box-shadow: 15px 5px 10px #48529944;
-  background-color: #bebebe;
+  padding: 30px 60px 20px;
 }
 
 .grid div {
   border-radius: 100px;
   margin-bottom: 7px;
   margin-left: 7px;
+}
+
+.not-checked {
+  border: 0.5px solid;
+  box-shadow: 15px 5px 10px #48529944;
+  background-color: #bebebe;
 }
 
 .not-checked:hover {
@@ -57,27 +70,6 @@ html {
 
 .player-two:hover {
   background-color: rgb(255, 255, 255);
-}
-
-h1 {
-  font-family: Arial Black;
-  font-weight: bold;
-  font-size: 40px;
-  background: #202020;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4),
-    0px -1px 1px rgba(0, 0, 0, 0.3);
-}
-
-.result {
-  font-family: Arial Black;
-  font-weight: bold;
-  font-size: 40px;
-  color: rgb(134, 109, 208);
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
 
 .again {
@@ -106,7 +98,7 @@ h1 {
   font-family: Arial Black;
   font-weight: bold;
   font-size: 40px;
-  color: rgb(109, 66, 51);
+  color: rgb(145, 93, 75);
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
 

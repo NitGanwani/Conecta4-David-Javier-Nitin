@@ -1,9 +1,8 @@
 let slots = document.querySelectorAll(".grid div");
 const result = document.querySelector(".result");
-const displayTurn = document.querySelector(".display-player");
+const display = document.querySelector(".display-player");
 const notAvailable = document.querySelector(".not-available");
 const displayCurrentPlayer = document.querySelector(".current-player");
-const restartButton = document.querySelector(".again");
 let currentPlayer = 1;
 
 const winningArrays = [
@@ -78,13 +77,6 @@ const winningArrays = [
   [13, 20, 27, 34],
 ];
 
-const playAgain = () => {
-  restartButton.addEventListener("click", () => {
-    document.location.reload();
-    return false;
-  });
-};
-
 const checkAllSlots = () => {
   for (
     let winningPosition = 0;
@@ -102,8 +94,8 @@ const checkAllSlots = () => {
       slot3.classList.contains("player-one") &&
       slot4.classList.contains("player-one")
     ) {
-      result.classList.toggle("result");
       result.innerHTML = "El jugador 1 gana!";
+      result.style.color = "rgb(38, 202, 101)";
       removeClickHandlersFromSlots();
       return;
     }
@@ -113,8 +105,8 @@ const checkAllSlots = () => {
       slot3.classList.contains("player-two") &&
       slot4.classList.contains("player-two")
     ) {
-      result.classList.toggle("result");
       result.innerHTML = "El jugador 2 gana!";
+      result.style.color = "rgb(38, 202, 101)";
       removeClickHandlersFromSlots();
       return;
     }
@@ -127,7 +119,7 @@ const removeClickHandlersFromSlots = () => {
   }
 };
 
-const advanceCheckedSlots = () => {
+const playGame = () => {
   for (let slotPosition = 0; slotPosition < slots.length; slotPosition++) {
     slots[slotPosition].onclick = () => {
       if (
@@ -153,15 +145,9 @@ const advanceCheckedSlots = () => {
           notAvailable.innerHTML = "";
         }, 1000);
       }
-
       checkAllSlots();
     };
   }
-};
-
-const playGame = () => {
-  checkAllSlots();
-  advanceCheckedSlots();
 };
 
 playGame();
