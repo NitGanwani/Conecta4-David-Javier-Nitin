@@ -114,8 +114,8 @@ const checkAllSlots = () => {
 };
 
 const removeClickHandlersFromSlots = () => {
-  for (let i = 0; i < slots.length; i++) {
-    slots[i].onclick = null;
+  for (let allSlots = 0; allSlots < slots.length; allSlots++) {
+    slots[allSlots].onclick = null;
   }
 };
 
