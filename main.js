@@ -140,7 +140,7 @@ const playGame = () => {
           displayCurrentPlayer.style.color = "rgb(0, 0, 0)";
         }
       } else {
-        notAvailable.innerHTML = "No puedes jugar aquí.";
+        notAvailable.innerHTML = "¡No tienes poder aquí!.";
         setTimeout(() => {
           notAvailable.innerHTML = "";
         }, 1000);
