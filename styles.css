@@ -29,7 +29,7 @@ h1 {
 .grid {
   display: grid;
   width: 710px;
-  height: 650px;
+  height: 580px;
   grid-template-columns: repeat(7, 80px);
   grid-template-rows: 80px repeat(6, 80px);
   justify-content: center;
