@@ -5,7 +5,7 @@ const notAvailable = document.querySelector(".not-available");
 const displayCurrentPlayer = document.querySelector(".current-player");
 let currentPlayer = 1;
 
-const winningArrays = [
+const winningCombinations = [
   [0, 1, 2, 3],
   [41, 40, 39, 38],
   [7, 8, 9, 10],
@@ -79,14 +79,14 @@ const winningArrays = [
 
 const checkAllSlots = () => {
   for (
-    let winningPosition = 0;
-    winningPosition < winningArrays.length;
-    winningPosition++
+    let checkedPosition = 0;
+    checkedPosition < winningCombinations.length;
+    checkedPosition++
   ) {
-    const slot1 = slots[winningArrays[winningPosition][0]];
-    const slot2 = slots[winningArrays[winningPosition][1]];
-    const slot3 = slots[winningArrays[winningPosition][2]];
-    const slot4 = slots[winningArrays[winningPosition][3]];
+    const slot1 = slots[winningCombinations[checkedPosition][0]];
+    const slot2 = slots[winningCombinations[checkedPosition][1]];
+    const slot3 = slots[winningCombinations[checkedPosition][2]];
+    const slot4 = slots[winningCombinations[checkedPosition][3]];
 
     if (
       slot1.classList.contains("player-one") &&
